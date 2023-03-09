@@ -12,36 +12,39 @@ Project: FFTUmbra hardware implementation
 #include "hls_x_complex.h"
 
 //default tested parameters
-#define img 28 //image size
+//#define img 28 //image size
+//#define fil 5 //filter size
+//#define fil_clip 2 // int(fil/2)
+//#define Val 4 // upper limit of image and filter arrays // barely used here, its the upper limit of the generated image and filter
+//#define P	8 // 3rd dimension of the array 2*Val
+//
+//#define Dimension1  32 // img+fil-1
+//#define Dimension2  32 // img+fil-1
+//#define Dimension3  8 // P
+//
+//#define FFT_LENGTH_xy 32 // xy fft
+//#define fft_size_xy 5 // log2(FFT_LENGTH)
+//
+//#define FFT_LENGTH_z 8 // xy fft
+//#define fft_size_z 3 // log2(FFT_LENGTH)
+
+//testing parameters
+#define img 508 //image size
 #define fil 5 //filter size
 #define fil_clip 2 // int(fil/2)
 #define Val 4 // upper limit of image and filter arrays // barely used here, its the upper limit of the generated image and filter
 #define P	8 // 3rd dimension of the array 2*Val
 
-#define Dimension1  32 // img+fil-1
-#define Dimension2  32 // img+fil-1
+#define Dimension1  512 // img+fil-1
+#define Dimension2  512 // img+fil-1
 #define Dimension3  8 // P
 
-#define FFT_LENGTH_xy 32 // xy fft
-#define fft_size_xy 5 // log2(FFT_LENGTH)
+#define FFT_LENGTH_xy 512 // xy fft
+#define fft_size_xy 9 // log2(FFT_LENGTH)
 
 #define FFT_LENGTH_z 8 // xy fft
 #define fft_size_z 3 // log2(FFT_LENGTH)
 
-
-//#define img 120 //image size
-//#define fil 8 //filter size
-//#define Val 64 // upper limit of image and filter arrays // barely used here, its the upper limit of the generated image and filter
-//#define P	128 // 3rd dimension of the array 2*Val
-//
-//#define Dimension1  128 // img+fil
-//#define Dimension2  128 // img+fil
-//#define Dimension3  128 // P
-//
-//#define FFT_LENGTH 128 // Dimension1
-//#define fft_size 7 // log2(FFT_LENGTH)
-
-//#define FFT_CHANNELS 1 //can not use multichannel when dealing with floating point format
 
 //typedef ap_fixed<2,2> fixed_t;
 typedef ap_uint<1> fixed_t;

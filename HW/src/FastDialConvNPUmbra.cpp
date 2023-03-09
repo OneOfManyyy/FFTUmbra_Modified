@@ -41,13 +41,14 @@ void FastDialConvNPUmbra (
 //				,hls::stream<complex_t> &oTest_stream
 	) {
 //Default pargmas for ports
-//#pragma HLS STREAM depth=26 variable=iImageArray2D_stream
+//#pragma HLS STREAM depth=28 variable=iImageArray2D_stream
 //#pragma HLS STREAM depth=6 variable=iFilterArray2D_stream
-//#pragma HLS STREAM depth=26 variable=oArray2D_stream
+//#pragma HLS STREAM depth=28 variable=oArray2D_stream
 
-#pragma HLS STREAM depth=28 variable=iImageArray2D_stream
+#pragma HLS STREAM depth=508 variable=iImageArray2D_stream
 #pragma HLS STREAM depth=5 variable=iFilterArray2D_stream
-#pragma HLS STREAM depth=28 variable=oArray2D_stream
+#pragma HLS STREAM depth=508 variable=oArray2D_stream
+
 //#pragma HLS STREAM depth=28 variable=oTest_stream
 
 
