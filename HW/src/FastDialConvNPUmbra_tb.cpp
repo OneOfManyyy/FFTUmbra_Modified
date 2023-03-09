@@ -115,5 +115,16 @@ int main() {
     fclose(outFile);
 //    fclose(testFile);
 
-    return 0;
+    if (system("diff -w ../../../simfiles/c_hls.txt ../../../simfiles/c.txt")) {
+
+  	fprintf(stdout, "*******************************************\n");
+  	fprintf(stdout, "FAIL: Output DOES NOT match the golden output\n");
+  	fprintf(stdout, "*******************************************\n");
+       return 1;
+    } else {
+  	fprintf(stdout, "*******************************************\n");
+  	fprintf(stdout, "PASS: The output matches the golden output!\n");
+  	fprintf(stdout, "*******************************************\n");
+       return 0;
+    }
 }
